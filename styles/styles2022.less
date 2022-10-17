@@ -16,6 +16,7 @@
   --light: #fff;
   --dark: #0a0404;
   --dark1: hsla(345, 5%, 36%, .5);
+  --dark2: rgba(0, 0, 0, .7);
   --blue: hsl(326, 91%, 52%);
   --blue-alter: hsl(326, 61%, 52%);
   --blue-light: hsla(326, 61%, 52%, .6);
@@ -63,7 +64,9 @@
 .html-block-contact,
 .html-blocks-cars-cards,
 .html-blocks-definition,
-.html-blocks-ua-hero {
+.html-blocks-ua-hero,
+.html-blocks-ua-info,
+.html-blocks-ua-car-packages {
 
   font-family: var(--font1);
   font-size: 16px;
@@ -78,6 +81,7 @@
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+    box-sizing: border-box;
   }
 
   .heading {
@@ -94,6 +98,15 @@
     @media (max-width: @mobile) {
       font-size: 28px;
     }
+  }
+
+  .btn_light {
+    display: table;
+    padding: 20px 40px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--light);
+    border: 1px solid var(--light);
   }
 
   .btn {
@@ -241,6 +254,11 @@
     gap: 7px;
     margin-bottom: 7px;
   }
+}
+
+.important {
+  color: red;
+  font-weight: 600;
 }
 
 .html-blocks-hero {
@@ -719,11 +737,6 @@
   }
 }
 
-.important {
-  color: red;
-  font-weight: 600;
-}
-
 .html-blocks-products {
   background-color: var(--dark1);
   color: var(--light);
@@ -1058,21 +1071,27 @@
 //Ultimate armor
 .html-blocks-ua-hero {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
+  background-color: var(--dark);
+
+  .btn_light {
+    display: table;
+    margin: 0 auto;
+  }
 
   &__video {
     position: absolute;
-    //width: 100%;
+    width: 100%;
     height: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
 
     video {
-      //width: 100%;
+      width: 100%;
       height: 100%;
-      display: table;
-
+      display: block;
+      object-fit: cover;
     }
 
     &::before {
@@ -1082,7 +1101,8 @@
       position: absolute;
       display: block;
       top: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: rgba(0, 0, 0, .7);
       z-index: 1;
       pointer-events: none;
@@ -1117,12 +1137,149 @@
   &__content {
 
   }
+
+  @media (max-width: 1035px) {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--dark2);
+    }
+
+    &__video {
+      display: none;
+    }
+
+    &__heading {
+      font-size: 50px;
+    }
+
+    &__subheading {
+      font-size: 35px;
+    }
+  }
 }
 
+.html-blocks-ua-info {
+  margin-top: var(--gap-md);
+  margin-bottom: var(--gap-md);
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xsm);
+    text-align: center;
 
+  }
 
+  &__logo {
+    width: 100%;
+    max-width: 300px;
+    align-self: center;
+  }
 
+  &__heading {
+    margin: 0;
+  }
 
+  &__description {
+    margin: var(--gap-xsm) 0;
+  }
+}
+
+.html-blocks-ua-car-packages {
+  background-color: var(--dark);
+  color: var(--light);
+
+  &__container {
+    padding-top: var(--gap-lg);
+    padding-bottom: var(--gap-md);
+
+  }
+
+  &__logo {
+    display: table;
+    margin-inline: auto;
+    margin-bottom: var(--gap-md);
+    width: 100%;
+    max-width: 500px;
+  }
+
+  &__holder {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-items: center;
+    gap: var(--gap-sm);
+    padding-top: var(--gap-sm);
+    padding-bottom: var(--gap-sm);
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--light);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 550px;
+    min-height: 300px;
+    flex: 0 1 550px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: var(--gap-xsm);
+  }
+
+  &__subheading {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: var(--gap-xsm);
+    font-size: 20px;
+  }
+
+  &__list {
+  }
+
+  &__sub-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+    justify-content: center;
+    margin-bottom: var(--gap-md);
+  }
+
+  &__sublogo {
+    width: 100%;
+    max-width: 150px;
+  }
+
+}
+
+//* {
+//  outline: 1px solid greenyellow;
+//}
 
 

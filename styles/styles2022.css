@@ -58,6 +58,7 @@
   --light: #fff;
   --dark: #0a0404;
   --dark1: hsla(345, 5%, 36%, 0.5);
+  --dark2: rgba(0, 0, 0, 0.7);
   --blue: hsl(326, 91%, 52%);
   --blue-alter: hsl(326, 61%, 52%);
   --blue-light: hsla(326, 61%, 52%, 0.6);
@@ -91,7 +92,9 @@
 .html-block-contact,
 .html-blocks-cars-cards,
 .html-blocks-definition,
-.html-blocks-ua-hero {
+.html-blocks-ua-hero,
+.html-blocks-ua-info,
+.html-blocks-ua-car-packages {
   font-family: var(--font1);
   font-size: 16px;
   line-height: var(--lh);
@@ -107,7 +110,9 @@
   .html-block-contact,
   .html-blocks-cars-cards,
   .html-blocks-definition,
-  .html-blocks-ua-hero {
+  .html-blocks-ua-hero,
+  .html-blocks-ua-info,
+  .html-blocks-ua-car-packages {
     font-size: 14px;
   }
 }
@@ -121,12 +126,15 @@
 .html-block-contact [class*=__container],
 .html-blocks-cars-cards [class*=__container],
 .html-blocks-definition [class*=__container],
-.html-blocks-ua-hero [class*=__container] {
+.html-blocks-ua-hero [class*=__container],
+.html-blocks-ua-info [class*=__container],
+.html-blocks-ua-car-packages [class*=__container] {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  box-sizing: border-box;
 }
 .html-blocks-hero .heading,
 .html-blocks-chessboard .heading,
@@ -138,7 +146,9 @@
 .html-block-contact .heading,
 .html-blocks-cars-cards .heading,
 .html-blocks-definition .heading,
-.html-blocks-ua-hero .heading {
+.html-blocks-ua-hero .heading,
+.html-blocks-ua-info .heading,
+.html-blocks-ua-car-packages .heading {
   font-size: 48px;
   line-height: var(--lh);
 }
@@ -153,7 +163,9 @@
   .html-block-contact .heading,
   .html-blocks-cars-cards .heading,
   .html-blocks-definition .heading,
-  .html-blocks-ua-hero .heading {
+  .html-blocks-ua-hero .heading,
+  .html-blocks-ua-info .heading,
+  .html-blocks-ua-car-packages .heading {
     font-size: 35px;
   }
 }
@@ -167,7 +179,9 @@
 .html-block-contact .heading-2,
 .html-blocks-cars-cards .heading-2,
 .html-blocks-definition .heading-2,
-.html-blocks-ua-hero .heading-2 {
+.html-blocks-ua-hero .heading-2,
+.html-blocks-ua-info .heading-2,
+.html-blocks-ua-car-packages .heading-2 {
   font-size: 38px;
   line-height: var(--lh);
 }
@@ -182,9 +196,31 @@
   .html-block-contact .heading-2,
   .html-blocks-cars-cards .heading-2,
   .html-blocks-definition .heading-2,
-  .html-blocks-ua-hero .heading-2 {
+  .html-blocks-ua-hero .heading-2,
+  .html-blocks-ua-info .heading-2,
+  .html-blocks-ua-car-packages .heading-2 {
     font-size: 28px;
   }
+}
+.html-blocks-hero .btn_light,
+.html-blocks-chessboard .btn_light,
+.html-blocks-info .btn_light,
+.html-blocks .btn_light,
+.html-blocks-pricing .btn_light,
+.html-blocks-products .btn_light,
+.html-block-contact-hero .btn_light,
+.html-block-contact .btn_light,
+.html-blocks-cars-cards .btn_light,
+.html-blocks-definition .btn_light,
+.html-blocks-ua-hero .btn_light,
+.html-blocks-ua-info .btn_light,
+.html-blocks-ua-car-packages .btn_light {
+  display: table;
+  padding: 20px 40px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--light);
+  border: 1px solid var(--light);
 }
 .html-blocks-hero .btn,
 .html-blocks-chessboard .btn,
@@ -196,7 +232,9 @@
 .html-block-contact .btn,
 .html-blocks-cars-cards .btn,
 .html-blocks-definition .btn,
-.html-blocks-ua-hero .btn {
+.html-blocks-ua-hero .btn,
+.html-blocks-ua-info .btn,
+.html-blocks-ua-car-packages .btn {
   color: var(--light);
   text-decoration: none;
   background: var(--blue-light);
@@ -219,6 +257,8 @@
 .html-blocks-cars-cards .btn:focus,
 .html-blocks-definition .btn:focus,
 .html-blocks-ua-hero .btn:focus,
+.html-blocks-ua-info .btn:focus,
+.html-blocks-ua-car-packages .btn:focus,
 .html-blocks-hero .btn:visited,
 .html-blocks-chessboard .btn:visited,
 .html-blocks-info .btn:visited,
@@ -229,7 +269,9 @@
 .html-block-contact .btn:visited,
 .html-blocks-cars-cards .btn:visited,
 .html-blocks-definition .btn:visited,
-.html-blocks-ua-hero .btn:visited {
+.html-blocks-ua-hero .btn:visited,
+.html-blocks-ua-info .btn:visited,
+.html-blocks-ua-car-packages .btn:visited {
   color: var(--light);
   text-decoration: none;
 }
@@ -243,7 +285,9 @@
 .html-block-contact .btn:hover,
 .html-blocks-cars-cards .btn:hover,
 .html-blocks-definition .btn:hover,
-.html-blocks-ua-hero .btn:hover {
+.html-blocks-ua-hero .btn:hover,
+.html-blocks-ua-info .btn:hover,
+.html-blocks-ua-car-packages .btn:hover {
   background-color: var(--blue-alter);
   color: var(--light);
   text-decoration: none;
@@ -258,7 +302,9 @@
 .html-block-contact .btn span,
 .html-blocks-cars-cards .btn span,
 .html-blocks-definition .btn span,
-.html-blocks-ua-hero .btn span {
+.html-blocks-ua-hero .btn span,
+.html-blocks-ua-info .btn span,
+.html-blocks-ua-car-packages .btn span {
   position: relative;
   display: inline-block;
   transform: skew(21deg);
@@ -274,7 +320,9 @@
 .html-block-contact .btn_active,
 .html-blocks-cars-cards .btn_active,
 .html-blocks-definition .btn_active,
-.html-blocks-ua-hero .btn_active {
+.html-blocks-ua-hero .btn_active,
+.html-blocks-ua-info .btn_active,
+.html-blocks-ua-car-packages .btn_active {
   background: var(--blue);
   border: 1px solid var(--blue);
 }
@@ -289,7 +337,9 @@
   .html-block-contact .btn,
   .html-blocks-cars-cards .btn,
   .html-blocks-definition .btn,
-  .html-blocks-ua-hero .btn {
+  .html-blocks-ua-hero .btn,
+  .html-blocks-ua-info .btn,
+  .html-blocks-ua-car-packages .btn {
     padding: 16px 60px;
   }
 }
@@ -303,7 +353,9 @@
 .html-block-contact .font2,
 .html-blocks-cars-cards .font2,
 .html-blocks-definition .font2,
-.html-blocks-ua-hero .font2 {
+.html-blocks-ua-hero .font2,
+.html-blocks-ua-info .font2,
+.html-blocks-ua-car-packages .font2 {
   font-family: var(--font2);
 }
 .html-blocks-hero .text-highlight,
@@ -316,7 +368,9 @@
 .html-block-contact .text-highlight,
 .html-blocks-cars-cards .text-highlight,
 .html-blocks-definition .text-highlight,
-.html-blocks-ua-hero .text-highlight {
+.html-blocks-ua-hero .text-highlight,
+.html-blocks-ua-info .text-highlight,
+.html-blocks-ua-car-packages .text-highlight {
   color: var(--blue);
 }
 .html-blocks-hero .mb4,
@@ -329,7 +383,9 @@
 .html-block-contact .mb4,
 .html-blocks-cars-cards .mb4,
 .html-blocks-definition .mb4,
-.html-blocks-ua-hero .mb4 {
+.html-blocks-ua-hero .mb4,
+.html-blocks-ua-info .mb4,
+.html-blocks-ua-car-packages .mb4 {
   margin-bottom: 40px;
 }
 .html-blocks-hero .contact-form,
@@ -342,7 +398,9 @@
 .html-block-contact .contact-form,
 .html-blocks-cars-cards .contact-form,
 .html-blocks-definition .contact-form,
-.html-blocks-ua-hero .contact-form {
+.html-blocks-ua-hero .contact-form,
+.html-blocks-ua-info .contact-form,
+.html-blocks-ua-car-packages .contact-form {
   padding: 20px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
@@ -356,7 +414,9 @@
 .html-block-contact .contact-form p,
 .html-blocks-cars-cards .contact-form p,
 .html-blocks-definition .contact-form p,
-.html-blocks-ua-hero .contact-form p {
+.html-blocks-ua-hero .contact-form p,
+.html-blocks-ua-info .contact-form p,
+.html-blocks-ua-car-packages .contact-form p {
   margin-bottom: 15px;
 }
 .html-blocks-hero .contact-form input,
@@ -369,7 +429,9 @@
 .html-block-contact .contact-form input,
 .html-blocks-cars-cards .contact-form input,
 .html-blocks-definition .contact-form input,
-.html-blocks-ua-hero .contact-form input {
+.html-blocks-ua-hero .contact-form input,
+.html-blocks-ua-info .contact-form input,
+.html-blocks-ua-car-packages .contact-form input {
   width: 100%;
   display: block;
   padding: 10px;
@@ -386,7 +448,9 @@
 .html-block-contact .contact-form input[type="submit"],
 .html-blocks-cars-cards .contact-form input[type="submit"],
 .html-blocks-definition .contact-form input[type="submit"],
-.html-blocks-ua-hero .contact-form input[type="submit"] {
+.html-blocks-ua-hero .contact-form input[type="submit"],
+.html-blocks-ua-info .contact-form input[type="submit"],
+.html-blocks-ua-car-packages .contact-form input[type="submit"] {
   background-color: var(--dark1);
   color: var(--light);
   width: fit-content;
@@ -405,7 +469,9 @@
 .html-block-contact .custom-form,
 .html-blocks-cars-cards .custom-form,
 .html-blocks-definition .custom-form,
-.html-blocks-ua-hero .custom-form {
+.html-blocks-ua-hero .custom-form,
+.html-blocks-ua-info .custom-form,
+.html-blocks-ua-car-packages .custom-form {
   padding: 10px 20px;
   border: 1px solid var(--dark1);
 }
@@ -419,7 +485,9 @@
 .html-block-contact .custom-form button[type="submit"],
 .html-blocks-cars-cards .custom-form button[type="submit"],
 .html-blocks-definition .custom-form button[type="submit"],
-.html-blocks-ua-hero .custom-form button[type="submit"] {
+.html-blocks-ua-hero .custom-form button[type="submit"],
+.html-blocks-ua-info .custom-form button[type="submit"],
+.html-blocks-ua-car-packages .custom-form button[type="submit"] {
   padding: 10px 40px;
   background-color: var(--dark1);
   color: var(--light);
@@ -442,7 +510,9 @@
 .html-block-contact .custom-form ul,
 .html-blocks-cars-cards .custom-form ul,
 .html-blocks-definition .custom-form ul,
-.html-blocks-ua-hero .custom-form ul {
+.html-blocks-ua-hero .custom-form ul,
+.html-blocks-ua-info .custom-form ul,
+.html-blocks-ua-car-packages .custom-form ul {
   padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -457,7 +527,9 @@
 .html-block-contact .custom-form .infusion-field,
 .html-blocks-cars-cards .custom-form .infusion-field,
 .html-blocks-definition .custom-form .infusion-field,
-.html-blocks-ua-hero .custom-form .infusion-field {
+.html-blocks-ua-hero .custom-form .infusion-field,
+.html-blocks-ua-info .custom-form .infusion-field,
+.html-blocks-ua-car-packages .custom-form .infusion-field {
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -473,7 +545,9 @@
 .html-block-contact .custom-form .infusion-field input,
 .html-blocks-cars-cards .custom-form .infusion-field input,
 .html-blocks-definition .custom-form .infusion-field input,
-.html-blocks-ua-hero .custom-form .infusion-field input {
+.html-blocks-ua-hero .custom-form .infusion-field input,
+.html-blocks-ua-info .custom-form .infusion-field input,
+.html-blocks-ua-car-packages .custom-form .infusion-field input {
   width: 100%;
   padding: 10px;
   display: block;
@@ -489,7 +563,9 @@
 .html-block-contact .custom-form .infusion-field select,
 .html-blocks-cars-cards .custom-form .infusion-field select,
 .html-blocks-definition .custom-form .infusion-field select,
-.html-blocks-ua-hero .custom-form .infusion-field select {
+.html-blocks-ua-hero .custom-form .infusion-field select,
+.html-blocks-ua-info .custom-form .infusion-field select,
+.html-blocks-ua-car-packages .custom-form .infusion-field select {
   display: block;
   width: 100%;
   padding: 10px;
@@ -507,6 +583,8 @@
 .html-blocks-cars-cards .custom-form .infusion-field input[type="radio"],
 .html-blocks-definition .custom-form .infusion-field input[type="radio"],
 .html-blocks-ua-hero .custom-form .infusion-field input[type="radio"],
+.html-blocks-ua-info .custom-form .infusion-field input[type="radio"],
+.html-blocks-ua-car-packages .custom-form .infusion-field input[type="radio"],
 .html-blocks-hero .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-chessboard .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-info .custom-form .infusion-field input[type="checkbox"],
@@ -517,7 +595,9 @@
 .html-block-contact .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-cars-cards .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-definition .custom-form .infusion-field input[type="checkbox"],
-.html-blocks-ua-hero .custom-form .infusion-field input[type="checkbox"] {
+.html-blocks-ua-hero .custom-form .infusion-field input[type="checkbox"],
+.html-blocks-ua-info .custom-form .infusion-field input[type="checkbox"],
+.html-blocks-ua-car-packages .custom-form .infusion-field input[type="checkbox"] {
   display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
@@ -533,7 +613,9 @@
 .html-block-contact .custom-form .infusion-field .options-container,
 .html-blocks-cars-cards .custom-form .infusion-field .options-container,
 .html-blocks-definition .custom-form .infusion-field .options-container,
-.html-blocks-ua-hero .custom-form .infusion-field .options-container {
+.html-blocks-ua-hero .custom-form .infusion-field .options-container,
+.html-blocks-ua-info .custom-form .infusion-field .options-container,
+.html-blocks-ua-car-packages .custom-form .infusion-field .options-container {
   display: flex;
   flex-direction: column;
 }
@@ -547,11 +629,17 @@
 .html-block-contact .group,
 .html-blocks-cars-cards .group,
 .html-blocks-definition .group,
-.html-blocks-ua-hero .group {
+.html-blocks-ua-hero .group,
+.html-blocks-ua-info .group,
+.html-blocks-ua-car-packages .group {
   display: flex;
   flex-direction: column;
   gap: 7px;
   margin-bottom: 7px;
+}
+.important {
+  color: red;
+  font-weight: 600;
 }
 .html-blocks-hero {
   background-color: #bdbbbb;
@@ -910,10 +998,6 @@
     order: 2;
   }
 }
-.important {
-  color: red;
-  font-weight: 600;
-}
 .html-blocks-products {
   background-color: var(--dark1);
   color: var(--light);
@@ -1167,18 +1251,25 @@
 }
 .html-blocks-ua-hero {
   position: relative;
-  overflow: hidden;
+  background-color: var(--dark);
+}
+.html-blocks-ua-hero .btn_light {
+  display: table;
+  margin: 0 auto;
 }
 .html-blocks-ua-hero__video {
   position: absolute;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 .html-blocks-ua-hero__video video {
+  width: 100%;
   height: 100%;
-  display: table;
+  display: block;
+  object-fit: cover;
 }
 .html-blocks-ua-hero__video::before {
   content: '';
@@ -1187,7 +1278,8 @@
   position: absolute;
   display: block;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   pointer-events: none;
@@ -1211,5 +1303,118 @@
   color: inherit;
   font-size: 60px;
   line-height: var(--lh);
+}
+@media (max-width: 1035px) {
+  .html-blocks-ua-hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .html-blocks-ua-hero::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark2);
+  }
+  .html-blocks-ua-hero__video {
+    display: none;
+  }
+  .html-blocks-ua-hero__heading {
+    font-size: 50px;
+  }
+  .html-blocks-ua-hero__subheading {
+    font-size: 35px;
+  }
+}
+.html-blocks-ua-info {
+  margin-top: var(--gap-md);
+  margin-bottom: var(--gap-md);
+}
+.html-blocks-ua-info__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xsm);
+  text-align: center;
+}
+.html-blocks-ua-info__logo {
+  width: 100%;
+  max-width: 300px;
+  align-self: center;
+}
+.html-blocks-ua-info__heading {
+  margin: 0;
+}
+.html-blocks-ua-info__description {
+  margin: var(--gap-xsm) 0;
+}
+.html-blocks-ua-car-packages {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.html-blocks-ua-car-packages__container {
+  padding-top: var(--gap-lg);
+  padding-bottom: var(--gap-md);
+}
+.html-blocks-ua-car-packages__logo {
+  display: table;
+  margin-inline: auto;
+  margin-bottom: var(--gap-md);
+  width: 100%;
+  max-width: 500px;
+}
+.html-blocks-ua-car-packages__holder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+.html-blocks-ua-car-packages__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-sm);
+  padding-top: var(--gap-sm);
+  padding-bottom: var(--gap-sm);
+}
+.html-blocks-ua-car-packages__item:not(:last-child) {
+  border-bottom: 1px solid var(--light);
+}
+.html-blocks-ua-car-packages__img {
+  width: 100%;
+  max-width: 550px;
+  min-height: 300px;
+  flex: 0 1 550px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.html-blocks-ua-car-packages__content {
+  width: 100%;
+  max-width: 600px;
+}
+.html-blocks-ua-car-packages__heading {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: var(--gap-xsm);
+}
+.html-blocks-ua-car-packages__subheading {
+  background-color: var(--light);
+  color: var(--dark);
+  padding: var(--gap-xsm);
+  font-size: 20px;
+}
+.html-blocks-ua-car-packages__sub-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  justify-content: center;
+  margin-bottom: var(--gap-md);
+}
+.html-blocks-ua-car-packages__sublogo {
+  width: 100%;
+  max-width: 150px;
 }
 /*# sourceMappingURL=styles2022.css.map */
