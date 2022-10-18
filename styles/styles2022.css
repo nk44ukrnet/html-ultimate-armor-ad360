@@ -593,6 +593,44 @@
   cursor: pointer;
   border: none;
 }
+.html-blocks-hero .custom-form button[type="submit"].btn_colored,
+.html-blocks-chessboard .custom-form button[type="submit"].btn_colored,
+.html-blocks-info .custom-form button[type="submit"].btn_colored,
+.html-blocks .custom-form button[type="submit"].btn_colored,
+.html-blocks-pricing .custom-form button[type="submit"].btn_colored,
+.html-blocks-products .custom-form button[type="submit"].btn_colored,
+.html-block-contact-hero .custom-form button[type="submit"].btn_colored,
+.html-block-contact .custom-form button[type="submit"].btn_colored,
+.html-blocks-cars-cards .custom-form button[type="submit"].btn_colored,
+.html-blocks-definition .custom-form button[type="submit"].btn_colored,
+.html-blocks-ua-hero .custom-form button[type="submit"].btn_colored,
+.html-blocks-ua-info .custom-form button[type="submit"].btn_colored,
+.html-blocks-ua-car-packages .custom-form button[type="submit"].btn_colored,
+.html-blocks-ua-car-packages2 .custom-form button[type="submit"].btn_colored,
+.html-blocks-ua-tabs .custom-form button[type="submit"].btn_colored,
+.html-blocks-ua-modal .custom-form button[type="submit"].btn_colored {
+  background-color: var(--blue);
+}
+.html-blocks-hero .custom-form iframe,
+.html-blocks-chessboard .custom-form iframe,
+.html-blocks-info .custom-form iframe,
+.html-blocks .custom-form iframe,
+.html-blocks-pricing .custom-form iframe,
+.html-blocks-products .custom-form iframe,
+.html-block-contact-hero .custom-form iframe,
+.html-block-contact .custom-form iframe,
+.html-blocks-cars-cards .custom-form iframe,
+.html-blocks-definition .custom-form iframe,
+.html-blocks-ua-hero .custom-form iframe,
+.html-blocks-ua-info .custom-form iframe,
+.html-blocks-ua-car-packages .custom-form iframe,
+.html-blocks-ua-car-packages2 .custom-form iframe,
+.html-blocks-ua-tabs .custom-form iframe,
+.html-blocks-ua-modal .custom-form iframe {
+  width: 100%;
+  display: block;
+  min-height: 315px;
+}
 .html-blocks-hero .custom-form ul,
 .html-blocks-chessboard .custom-form ul,
 .html-blocks-info .custom-form ul,
