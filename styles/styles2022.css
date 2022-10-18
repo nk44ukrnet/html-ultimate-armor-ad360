@@ -82,6 +82,9 @@
 .text-center {
   text-align: center;
 }
+._lock {
+  overflow: hidden;
+}
 .html-blocks-hero,
 .html-blocks-chessboard,
 .html-blocks-info,
@@ -94,7 +97,10 @@
 .html-blocks-definition,
 .html-blocks-ua-hero,
 .html-blocks-ua-info,
-.html-blocks-ua-car-packages {
+.html-blocks-ua-car-packages,
+.html-blocks-ua-car-packages2,
+.html-blocks-ua-tabs,
+.html-blocks-ua-modal {
   font-family: var(--font1);
   font-size: 16px;
   line-height: var(--lh);
@@ -112,7 +118,10 @@
   .html-blocks-definition,
   .html-blocks-ua-hero,
   .html-blocks-ua-info,
-  .html-blocks-ua-car-packages {
+  .html-blocks-ua-car-packages,
+  .html-blocks-ua-car-packages2,
+  .html-blocks-ua-tabs,
+  .html-blocks-ua-modal {
     font-size: 14px;
   }
 }
@@ -128,7 +137,10 @@
 .html-blocks-definition [class*=__container],
 .html-blocks-ua-hero [class*=__container],
 .html-blocks-ua-info [class*=__container],
-.html-blocks-ua-car-packages [class*=__container] {
+.html-blocks-ua-car-packages [class*=__container],
+.html-blocks-ua-car-packages2 [class*=__container],
+.html-blocks-ua-tabs [class*=__container],
+.html-blocks-ua-modal [class*=__container] {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
@@ -148,7 +160,10 @@
 .html-blocks-definition .heading,
 .html-blocks-ua-hero .heading,
 .html-blocks-ua-info .heading,
-.html-blocks-ua-car-packages .heading {
+.html-blocks-ua-car-packages .heading,
+.html-blocks-ua-car-packages2 .heading,
+.html-blocks-ua-tabs .heading,
+.html-blocks-ua-modal .heading {
   font-size: 48px;
   line-height: var(--lh);
 }
@@ -165,7 +180,10 @@
   .html-blocks-definition .heading,
   .html-blocks-ua-hero .heading,
   .html-blocks-ua-info .heading,
-  .html-blocks-ua-car-packages .heading {
+  .html-blocks-ua-car-packages .heading,
+  .html-blocks-ua-car-packages2 .heading,
+  .html-blocks-ua-tabs .heading,
+  .html-blocks-ua-modal .heading {
     font-size: 35px;
   }
 }
@@ -181,7 +199,10 @@
 .html-blocks-definition .heading-2,
 .html-blocks-ua-hero .heading-2,
 .html-blocks-ua-info .heading-2,
-.html-blocks-ua-car-packages .heading-2 {
+.html-blocks-ua-car-packages .heading-2,
+.html-blocks-ua-car-packages2 .heading-2,
+.html-blocks-ua-tabs .heading-2,
+.html-blocks-ua-modal .heading-2 {
   font-size: 38px;
   line-height: var(--lh);
 }
@@ -198,9 +219,30 @@
   .html-blocks-definition .heading-2,
   .html-blocks-ua-hero .heading-2,
   .html-blocks-ua-info .heading-2,
-  .html-blocks-ua-car-packages .heading-2 {
+  .html-blocks-ua-car-packages .heading-2,
+  .html-blocks-ua-car-packages2 .heading-2,
+  .html-blocks-ua-tabs .heading-2,
+  .html-blocks-ua-modal .heading-2 {
     font-size: 28px;
   }
+}
+.html-blocks-hero .colored,
+.html-blocks-chessboard .colored,
+.html-blocks-info .colored,
+.html-blocks .colored,
+.html-blocks-pricing .colored,
+.html-blocks-products .colored,
+.html-block-contact-hero .colored,
+.html-block-contact .colored,
+.html-blocks-cars-cards .colored,
+.html-blocks-definition .colored,
+.html-blocks-ua-hero .colored,
+.html-blocks-ua-info .colored,
+.html-blocks-ua-car-packages .colored,
+.html-blocks-ua-car-packages2 .colored,
+.html-blocks-ua-tabs .colored,
+.html-blocks-ua-modal .colored {
+  color: var(--blue);
 }
 .html-blocks-hero .btn_light,
 .html-blocks-chessboard .btn_light,
@@ -214,7 +256,10 @@
 .html-blocks-definition .btn_light,
 .html-blocks-ua-hero .btn_light,
 .html-blocks-ua-info .btn_light,
-.html-blocks-ua-car-packages .btn_light {
+.html-blocks-ua-car-packages .btn_light,
+.html-blocks-ua-car-packages2 .btn_light,
+.html-blocks-ua-tabs .btn_light,
+.html-blocks-ua-modal .btn_light {
   display: table;
   padding: 20px 40px;
   font-size: 20px;
@@ -234,7 +279,10 @@
 .html-blocks-definition .btn,
 .html-blocks-ua-hero .btn,
 .html-blocks-ua-info .btn,
-.html-blocks-ua-car-packages .btn {
+.html-blocks-ua-car-packages .btn,
+.html-blocks-ua-car-packages2 .btn,
+.html-blocks-ua-tabs .btn,
+.html-blocks-ua-modal .btn {
   color: var(--light);
   text-decoration: none;
   background: var(--blue-light);
@@ -259,6 +307,9 @@
 .html-blocks-ua-hero .btn:focus,
 .html-blocks-ua-info .btn:focus,
 .html-blocks-ua-car-packages .btn:focus,
+.html-blocks-ua-car-packages2 .btn:focus,
+.html-blocks-ua-tabs .btn:focus,
+.html-blocks-ua-modal .btn:focus,
 .html-blocks-hero .btn:visited,
 .html-blocks-chessboard .btn:visited,
 .html-blocks-info .btn:visited,
@@ -271,7 +322,10 @@
 .html-blocks-definition .btn:visited,
 .html-blocks-ua-hero .btn:visited,
 .html-blocks-ua-info .btn:visited,
-.html-blocks-ua-car-packages .btn:visited {
+.html-blocks-ua-car-packages .btn:visited,
+.html-blocks-ua-car-packages2 .btn:visited,
+.html-blocks-ua-tabs .btn:visited,
+.html-blocks-ua-modal .btn:visited {
   color: var(--light);
   text-decoration: none;
 }
@@ -287,7 +341,10 @@
 .html-blocks-definition .btn:hover,
 .html-blocks-ua-hero .btn:hover,
 .html-blocks-ua-info .btn:hover,
-.html-blocks-ua-car-packages .btn:hover {
+.html-blocks-ua-car-packages .btn:hover,
+.html-blocks-ua-car-packages2 .btn:hover,
+.html-blocks-ua-tabs .btn:hover,
+.html-blocks-ua-modal .btn:hover {
   background-color: var(--blue-alter);
   color: var(--light);
   text-decoration: none;
@@ -304,7 +361,10 @@
 .html-blocks-definition .btn span,
 .html-blocks-ua-hero .btn span,
 .html-blocks-ua-info .btn span,
-.html-blocks-ua-car-packages .btn span {
+.html-blocks-ua-car-packages .btn span,
+.html-blocks-ua-car-packages2 .btn span,
+.html-blocks-ua-tabs .btn span,
+.html-blocks-ua-modal .btn span {
   position: relative;
   display: inline-block;
   transform: skew(21deg);
@@ -322,7 +382,10 @@
 .html-blocks-definition .btn_active,
 .html-blocks-ua-hero .btn_active,
 .html-blocks-ua-info .btn_active,
-.html-blocks-ua-car-packages .btn_active {
+.html-blocks-ua-car-packages .btn_active,
+.html-blocks-ua-car-packages2 .btn_active,
+.html-blocks-ua-tabs .btn_active,
+.html-blocks-ua-modal .btn_active {
   background: var(--blue);
   border: 1px solid var(--blue);
 }
@@ -339,7 +402,10 @@
   .html-blocks-definition .btn,
   .html-blocks-ua-hero .btn,
   .html-blocks-ua-info .btn,
-  .html-blocks-ua-car-packages .btn {
+  .html-blocks-ua-car-packages .btn,
+  .html-blocks-ua-car-packages2 .btn,
+  .html-blocks-ua-tabs .btn,
+  .html-blocks-ua-modal .btn {
     padding: 16px 60px;
   }
 }
@@ -355,7 +421,10 @@
 .html-blocks-definition .font2,
 .html-blocks-ua-hero .font2,
 .html-blocks-ua-info .font2,
-.html-blocks-ua-car-packages .font2 {
+.html-blocks-ua-car-packages .font2,
+.html-blocks-ua-car-packages2 .font2,
+.html-blocks-ua-tabs .font2,
+.html-blocks-ua-modal .font2 {
   font-family: var(--font2);
 }
 .html-blocks-hero .text-highlight,
@@ -370,7 +439,10 @@
 .html-blocks-definition .text-highlight,
 .html-blocks-ua-hero .text-highlight,
 .html-blocks-ua-info .text-highlight,
-.html-blocks-ua-car-packages .text-highlight {
+.html-blocks-ua-car-packages .text-highlight,
+.html-blocks-ua-car-packages2 .text-highlight,
+.html-blocks-ua-tabs .text-highlight,
+.html-blocks-ua-modal .text-highlight {
   color: var(--blue);
 }
 .html-blocks-hero .mb4,
@@ -385,7 +457,10 @@
 .html-blocks-definition .mb4,
 .html-blocks-ua-hero .mb4,
 .html-blocks-ua-info .mb4,
-.html-blocks-ua-car-packages .mb4 {
+.html-blocks-ua-car-packages .mb4,
+.html-blocks-ua-car-packages2 .mb4,
+.html-blocks-ua-tabs .mb4,
+.html-blocks-ua-modal .mb4 {
   margin-bottom: 40px;
 }
 .html-blocks-hero .contact-form,
@@ -400,7 +475,10 @@
 .html-blocks-definition .contact-form,
 .html-blocks-ua-hero .contact-form,
 .html-blocks-ua-info .contact-form,
-.html-blocks-ua-car-packages .contact-form {
+.html-blocks-ua-car-packages .contact-form,
+.html-blocks-ua-car-packages2 .contact-form,
+.html-blocks-ua-tabs .contact-form,
+.html-blocks-ua-modal .contact-form {
   padding: 20px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
@@ -416,7 +494,10 @@
 .html-blocks-definition .contact-form p,
 .html-blocks-ua-hero .contact-form p,
 .html-blocks-ua-info .contact-form p,
-.html-blocks-ua-car-packages .contact-form p {
+.html-blocks-ua-car-packages .contact-form p,
+.html-blocks-ua-car-packages2 .contact-form p,
+.html-blocks-ua-tabs .contact-form p,
+.html-blocks-ua-modal .contact-form p {
   margin-bottom: 15px;
 }
 .html-blocks-hero .contact-form input,
@@ -431,7 +512,10 @@
 .html-blocks-definition .contact-form input,
 .html-blocks-ua-hero .contact-form input,
 .html-blocks-ua-info .contact-form input,
-.html-blocks-ua-car-packages .contact-form input {
+.html-blocks-ua-car-packages .contact-form input,
+.html-blocks-ua-car-packages2 .contact-form input,
+.html-blocks-ua-tabs .contact-form input,
+.html-blocks-ua-modal .contact-form input {
   width: 100%;
   display: block;
   padding: 10px;
@@ -450,7 +534,10 @@
 .html-blocks-definition .contact-form input[type="submit"],
 .html-blocks-ua-hero .contact-form input[type="submit"],
 .html-blocks-ua-info .contact-form input[type="submit"],
-.html-blocks-ua-car-packages .contact-form input[type="submit"] {
+.html-blocks-ua-car-packages .contact-form input[type="submit"],
+.html-blocks-ua-car-packages2 .contact-form input[type="submit"],
+.html-blocks-ua-tabs .contact-form input[type="submit"],
+.html-blocks-ua-modal .contact-form input[type="submit"] {
   background-color: var(--dark1);
   color: var(--light);
   width: fit-content;
@@ -471,7 +558,10 @@
 .html-blocks-definition .custom-form,
 .html-blocks-ua-hero .custom-form,
 .html-blocks-ua-info .custom-form,
-.html-blocks-ua-car-packages .custom-form {
+.html-blocks-ua-car-packages .custom-form,
+.html-blocks-ua-car-packages2 .custom-form,
+.html-blocks-ua-tabs .custom-form,
+.html-blocks-ua-modal .custom-form {
   padding: 10px 20px;
   border: 1px solid var(--dark1);
 }
@@ -487,7 +577,10 @@
 .html-blocks-definition .custom-form button[type="submit"],
 .html-blocks-ua-hero .custom-form button[type="submit"],
 .html-blocks-ua-info .custom-form button[type="submit"],
-.html-blocks-ua-car-packages .custom-form button[type="submit"] {
+.html-blocks-ua-car-packages .custom-form button[type="submit"],
+.html-blocks-ua-car-packages2 .custom-form button[type="submit"],
+.html-blocks-ua-tabs .custom-form button[type="submit"],
+.html-blocks-ua-modal .custom-form button[type="submit"] {
   padding: 10px 40px;
   background-color: var(--dark1);
   color: var(--light);
@@ -512,7 +605,10 @@
 .html-blocks-definition .custom-form ul,
 .html-blocks-ua-hero .custom-form ul,
 .html-blocks-ua-info .custom-form ul,
-.html-blocks-ua-car-packages .custom-form ul {
+.html-blocks-ua-car-packages .custom-form ul,
+.html-blocks-ua-car-packages2 .custom-form ul,
+.html-blocks-ua-tabs .custom-form ul,
+.html-blocks-ua-modal .custom-form ul {
   padding-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -529,7 +625,10 @@
 .html-blocks-definition .custom-form .infusion-field,
 .html-blocks-ua-hero .custom-form .infusion-field,
 .html-blocks-ua-info .custom-form .infusion-field,
-.html-blocks-ua-car-packages .custom-form .infusion-field {
+.html-blocks-ua-car-packages .custom-form .infusion-field,
+.html-blocks-ua-car-packages2 .custom-form .infusion-field,
+.html-blocks-ua-tabs .custom-form .infusion-field,
+.html-blocks-ua-modal .custom-form .infusion-field {
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -547,7 +646,10 @@
 .html-blocks-definition .custom-form .infusion-field input,
 .html-blocks-ua-hero .custom-form .infusion-field input,
 .html-blocks-ua-info .custom-form .infusion-field input,
-.html-blocks-ua-car-packages .custom-form .infusion-field input {
+.html-blocks-ua-car-packages .custom-form .infusion-field input,
+.html-blocks-ua-car-packages2 .custom-form .infusion-field input,
+.html-blocks-ua-tabs .custom-form .infusion-field input,
+.html-blocks-ua-modal .custom-form .infusion-field input {
   width: 100%;
   padding: 10px;
   display: block;
@@ -565,7 +667,10 @@
 .html-blocks-definition .custom-form .infusion-field select,
 .html-blocks-ua-hero .custom-form .infusion-field select,
 .html-blocks-ua-info .custom-form .infusion-field select,
-.html-blocks-ua-car-packages .custom-form .infusion-field select {
+.html-blocks-ua-car-packages .custom-form .infusion-field select,
+.html-blocks-ua-car-packages2 .custom-form .infusion-field select,
+.html-blocks-ua-tabs .custom-form .infusion-field select,
+.html-blocks-ua-modal .custom-form .infusion-field select {
   display: block;
   width: 100%;
   padding: 10px;
@@ -585,6 +690,9 @@
 .html-blocks-ua-hero .custom-form .infusion-field input[type="radio"],
 .html-blocks-ua-info .custom-form .infusion-field input[type="radio"],
 .html-blocks-ua-car-packages .custom-form .infusion-field input[type="radio"],
+.html-blocks-ua-car-packages2 .custom-form .infusion-field input[type="radio"],
+.html-blocks-ua-tabs .custom-form .infusion-field input[type="radio"],
+.html-blocks-ua-modal .custom-form .infusion-field input[type="radio"],
 .html-blocks-hero .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-chessboard .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-info .custom-form .infusion-field input[type="checkbox"],
@@ -597,7 +705,10 @@
 .html-blocks-definition .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-ua-hero .custom-form .infusion-field input[type="checkbox"],
 .html-blocks-ua-info .custom-form .infusion-field input[type="checkbox"],
-.html-blocks-ua-car-packages .custom-form .infusion-field input[type="checkbox"] {
+.html-blocks-ua-car-packages .custom-form .infusion-field input[type="checkbox"],
+.html-blocks-ua-car-packages2 .custom-form .infusion-field input[type="checkbox"],
+.html-blocks-ua-tabs .custom-form .infusion-field input[type="checkbox"],
+.html-blocks-ua-modal .custom-form .infusion-field input[type="checkbox"] {
   display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
@@ -615,7 +726,10 @@
 .html-blocks-definition .custom-form .infusion-field .options-container,
 .html-blocks-ua-hero .custom-form .infusion-field .options-container,
 .html-blocks-ua-info .custom-form .infusion-field .options-container,
-.html-blocks-ua-car-packages .custom-form .infusion-field .options-container {
+.html-blocks-ua-car-packages .custom-form .infusion-field .options-container,
+.html-blocks-ua-car-packages2 .custom-form .infusion-field .options-container,
+.html-blocks-ua-tabs .custom-form .infusion-field .options-container,
+.html-blocks-ua-modal .custom-form .infusion-field .options-container {
   display: flex;
   flex-direction: column;
 }
@@ -631,11 +745,182 @@
 .html-blocks-definition .group,
 .html-blocks-ua-hero .group,
 .html-blocks-ua-info .group,
-.html-blocks-ua-car-packages .group {
+.html-blocks-ua-car-packages .group,
+.html-blocks-ua-car-packages2 .group,
+.html-blocks-ua-tabs .group,
+.html-blocks-ua-modal .group {
   display: flex;
   flex-direction: column;
   gap: 7px;
   margin-bottom: 7px;
+}
+.html-blocks-hero .modal-backdrop,
+.html-blocks-chessboard .modal-backdrop,
+.html-blocks-info .modal-backdrop,
+.html-blocks .modal-backdrop,
+.html-blocks-pricing .modal-backdrop,
+.html-blocks-products .modal-backdrop,
+.html-block-contact-hero .modal-backdrop,
+.html-block-contact .modal-backdrop,
+.html-blocks-cars-cards .modal-backdrop,
+.html-blocks-definition .modal-backdrop,
+.html-blocks-ua-hero .modal-backdrop,
+.html-blocks-ua-info .modal-backdrop,
+.html-blocks-ua-car-packages .modal-backdrop,
+.html-blocks-ua-car-packages2 .modal-backdrop,
+.html-blocks-ua-tabs .modal-backdrop,
+.html-blocks-ua-modal .modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark1);
+  z-index: 1050;
+  transition: var(--linear);
+}
+.html-blocks-hero .modal-backdrop:not(.active),
+.html-blocks-chessboard .modal-backdrop:not(.active),
+.html-blocks-info .modal-backdrop:not(.active),
+.html-blocks .modal-backdrop:not(.active),
+.html-blocks-pricing .modal-backdrop:not(.active),
+.html-blocks-products .modal-backdrop:not(.active),
+.html-block-contact-hero .modal-backdrop:not(.active),
+.html-block-contact .modal-backdrop:not(.active),
+.html-blocks-cars-cards .modal-backdrop:not(.active),
+.html-blocks-definition .modal-backdrop:not(.active),
+.html-blocks-ua-hero .modal-backdrop:not(.active),
+.html-blocks-ua-info .modal-backdrop:not(.active),
+.html-blocks-ua-car-packages .modal-backdrop:not(.active),
+.html-blocks-ua-car-packages2 .modal-backdrop:not(.active),
+.html-blocks-ua-tabs .modal-backdrop:not(.active),
+.html-blocks-ua-modal .modal-backdrop:not(.active) {
+  display: none;
+}
+.html-blocks-hero .modal,
+.html-blocks-chessboard .modal,
+.html-blocks-info .modal,
+.html-blocks .modal,
+.html-blocks-pricing .modal,
+.html-blocks-products .modal,
+.html-block-contact-hero .modal,
+.html-block-contact .modal,
+.html-blocks-cars-cards .modal,
+.html-blocks-definition .modal,
+.html-blocks-ua-hero .modal,
+.html-blocks-ua-info .modal,
+.html-blocks-ua-car-packages .modal,
+.html-blocks-ua-car-packages2 .modal,
+.html-blocks-ua-tabs .modal,
+.html-blocks-ua-modal .modal {
+  padding-right: 17px;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  width: 100vw;
+  height: 100vh;
+}
+.html-blocks-hero .modal-dialog,
+.html-blocks-chessboard .modal-dialog,
+.html-blocks-info .modal-dialog,
+.html-blocks .modal-dialog,
+.html-blocks-pricing .modal-dialog,
+.html-blocks-products .modal-dialog,
+.html-block-contact-hero .modal-dialog,
+.html-block-contact .modal-dialog,
+.html-blocks-cars-cards .modal-dialog,
+.html-blocks-definition .modal-dialog,
+.html-blocks-ua-hero .modal-dialog,
+.html-blocks-ua-info .modal-dialog,
+.html-blocks-ua-car-packages .modal-dialog,
+.html-blocks-ua-car-packages2 .modal-dialog,
+.html-blocks-ua-tabs .modal-dialog,
+.html-blocks-ua-modal .modal-dialog {
+  width: 100%;
+  max-width: 50rem;
+  min-height: calc(100% - 3.5rem);
+  margin: 1.75rem auto;
+  /* background-color: red; */
+  position: relative;
+  /* left: 50%; */
+  display: flex;
+  align-items: center;
+}
+.html-blocks-hero .modal-content,
+.html-blocks-chessboard .modal-content,
+.html-blocks-info .modal-content,
+.html-blocks .modal-content,
+.html-blocks-pricing .modal-content,
+.html-blocks-products .modal-content,
+.html-block-contact-hero .modal-content,
+.html-block-contact .modal-content,
+.html-blocks-cars-cards .modal-content,
+.html-blocks-definition .modal-content,
+.html-blocks-ua-hero .modal-content,
+.html-blocks-ua-info .modal-content,
+.html-blocks-ua-car-packages .modal-content,
+.html-blocks-ua-car-packages2 .modal-content,
+.html-blocks-ua-tabs .modal-content,
+.html-blocks-ua-modal .modal-content {
+  border-radius: 2rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  border-color: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: none;
+}
+.html-blocks-hero .modal-content .close-modal,
+.html-blocks-chessboard .modal-content .close-modal,
+.html-blocks-info .modal-content .close-modal,
+.html-blocks .modal-content .close-modal,
+.html-blocks-pricing .modal-content .close-modal,
+.html-blocks-products .modal-content .close-modal,
+.html-block-contact-hero .modal-content .close-modal,
+.html-block-contact .modal-content .close-modal,
+.html-blocks-cars-cards .modal-content .close-modal,
+.html-blocks-definition .modal-content .close-modal,
+.html-blocks-ua-hero .modal-content .close-modal,
+.html-blocks-ua-info .modal-content .close-modal,
+.html-blocks-ua-car-packages .modal-content .close-modal,
+.html-blocks-ua-car-packages2 .modal-content .close-modal,
+.html-blocks-ua-tabs .modal-content .close-modal,
+.html-blocks-ua-modal .modal-content .close-modal {
+  text-decoration: none;
+  font-size: 40px;
+  margin-left: auto;
+  display: table;
+  color: var(--black);
+  margin-bottom: var(--gap-sm);
+}
+@media (max-width: 768px) {
+  .html-blocks-hero .modal-content,
+  .html-blocks-chessboard .modal-content,
+  .html-blocks-info .modal-content,
+  .html-blocks .modal-content,
+  .html-blocks-pricing .modal-content,
+  .html-blocks-products .modal-content,
+  .html-block-contact-hero .modal-content,
+  .html-block-contact .modal-content,
+  .html-blocks-cars-cards .modal-content,
+  .html-blocks-definition .modal-content,
+  .html-blocks-ua-hero .modal-content,
+  .html-blocks-ua-info .modal-content,
+  .html-blocks-ua-car-packages .modal-content,
+  .html-blocks-ua-car-packages2 .modal-content,
+  .html-blocks-ua-tabs .modal-content,
+  .html-blocks-ua-modal .modal-content {
+    padding: 20px;
+  }
 }
 .important {
   color: red;
@@ -1393,7 +1678,7 @@
 }
 .html-blocks-ua-car-packages__content {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
 }
 .html-blocks-ua-car-packages__heading {
   text-transform: uppercase;
@@ -1416,5 +1701,169 @@
 .html-blocks-ua-car-packages__sublogo {
   width: 100%;
   max-width: 150px;
+}
+.html-blocks-ua-car-packages2 {
+  background-color: var(--dark);
+  padding-top: var(--gap-lg);
+  padding-bottom: var(--gap-lg);
+  border-top: 4px solid var(--light);
+  color: var(--light);
+  background: linear-gradient(90deg, #282826, var(--dark));
+}
+.html-blocks-ua-car-packages2__logo {
+  display: table;
+  margin-inline: auto;
+  margin-bottom: var(--gap-xsm);
+  width: 100%;
+  max-width: 350px;
+}
+.html-blocks-ua-car-packages2__subheading {
+  text-transform: uppercase;
+  margin-bottom: var(--gap-md);
+}
+.html-blocks-ua-car-packages2__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  justify-content: center;
+  margin-bottom: var(--gap-md);
+}
+.html-blocks-ua-car-packages2__icons img {
+  width: 100%;
+  max-width: 150px;
+  border: 1px solid var(--light);
+  padding: var(--gap-xsm);
+}
+.html-blocks-ua-car-packages2__holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  justify-content: center;
+}
+.html-blocks-ua-car-packages2__item {
+  width: 100%;
+  max-width: 500px;
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xsm);
+  box-shadow: 0px 0px 5px var(--dark1);
+  box-sizing: border-box;
+}
+.html-blocks-ua-car-packages2__heading {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: var(--lh);
+  margin-bottom: var(--gap-sm);
+}
+.html-blocks-ua-car-packages2__feature {
+  text-align: center;
+  background-color: var(--blue);
+  padding: var(--gap-xsm);
+  border-radius: 5px;
+  margin: 0;
+  margin-bottom: var(--gap-sm);
+}
+.html-blocks-ua-car-packages2__ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.html-blocks-ua-car-packages2__li:not(:last-child) {
+  margin-bottom: var(--gap-xsm);
+}
+.html-blocks-ua-car-packages2__li::before {
+  content: attr(data-count);
+  padding: var(--gap-xsm);
+  margin-right: var(--gap-xsm);
+  width: 15px;
+  height: 15px;
+  line-height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.html-blocks-ua-car-packages2__desc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  text-align: center;
+}
+.html-blocks-ua-car-packages2__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: var(--lh);
+  font-weight: bold;
+}
+.html-blocks-ua-tabs {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.html-blocks-ua-tabs__container {
+  padding-top: var(--gap-lg);
+  padding-bottom: var(--gap-lg);
+}
+.html-blocks-ua-tabs__tab-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-sm);
+}
+.html-blocks-ua-tabs__tab,
+.html-blocks-ua-tabs__tab:active,
+.html-blocks-ua-tabs__tab:focus,
+.html-blocks-ua-tabs__tab:visited {
+  color: var(--light);
+  text-decoration: none;
+  padding: var(--gap-xsm);
+  font-weight: bold;
+}
+.html-blocks-ua-tabs__tab.active {
+  color: var(--light);
+  background-color: var(--blue);
+}
+.html-blocks-ua-tabs__tab:hover:not(.active) {
+  text-decoration: underline;
+}
+.html-blocks-ua-tabs__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+}
+.html-blocks-ua-tabs__content video {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  object-fit: contain;
+}
+.html-blocks-ua-tabs__content:not(.active) {
+  display: none;
+}
+.html-blocks-ua-tabs__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+.html-blocks-ua-tabs__heading {
+  margin: 0;
+}
+.html-blocks-ua-tabs__subheading {
+  margin: 0;
+  font-size: 25px;
+  color: var(--blue);
+}
+.html-blocks-ua-tabs__text {
+  font-size: 18px;
+}
+.html-blocks-ua-tabs .btn_light {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 30px;
 }
 /*# sourceMappingURL=styles2022.css.map */
