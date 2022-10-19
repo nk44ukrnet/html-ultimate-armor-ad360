@@ -1740,6 +1740,14 @@
   width: 100%;
   max-width: 150px;
 }
+@media (max-width: 768px) {
+  .html-blocks-ua-car-packages__sublogo {
+    max-width: 100px;
+  }
+  .html-blocks-ua-car-packages__img {
+    min-height: 150px;
+  }
+}
 .html-blocks-ua-car-packages2 {
   background-color: var(--dark);
   padding-top: var(--gap-lg);
@@ -1826,6 +1834,7 @@
   position: relative;
   top: 0;
   left: 0;
+  box-sizing: content-box;
 }
 .html-blocks-ua-car-packages2__desc {
   display: flex;
@@ -1838,6 +1847,11 @@
   font-size: 20px;
   line-height: var(--lh);
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .html-blocks-ua-car-packages2__icons img {
+    max-width: 100px;
+  }
 }
 .html-blocks-ua-tabs {
   background-color: var(--dark);
@@ -1883,6 +1897,12 @@
 .html-blocks-ua-tabs__content:not(.active) {
   display: none;
 }
+.html-blocks-ua-tabs__img {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  object-fit: contain;
+}
 .html-blocks-ua-tabs__inner {
   display: flex;
   flex-direction: column;
@@ -1904,4 +1924,121 @@
   width: fit-content;
   padding: 15px 30px;
 }
+@media (max-width: 768px) {
+  .html-blocks-ua-tabs__img {
+    display: block;
+  }
+  .html-blocks-ua-tabs__content video {
+    display: none;
+  }
+}
+/* CUSTOMIZATIONS - HEADER */
+.header-center #search {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.header-center #search::placeholder {
+  color: #888;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav-grp {
+  display: flex;
+}
+.header-nav .header-callout {
+  display: inline-block;
+  padding: 10px 30px 10px 20px;
+  background: #000;
+  color: #fff;
+  border-top-left-radius: 5px;
+  transition: var(--transition);
+  transform: skew(-21deg);
+  margin-right: -15px;
+  border-bottom-left-radius: 5px;
+  border: 3px solid var(--blue);
+}
+.book-now-btn {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: var(--transition);
+  transform: skew(-21deg);
+  font-weight: bold;
+  border: 3px solid var(--blue);
+  background: var(--blue);
+  padding: 8px 12px;
+  margin-right: 4px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-now-btn > span {
+  position: relative;
+  display: inline-block;
+  transform: skew(21deg);
+  color: inherit;
+}
+@media (max-width: 1248px) {
+  .header-callout > span {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .page-header.type2 .custom-block {
+    display: block !important;
+  }
+  .header-nav {
+    justify-content: flex-end;
+  }
+  .search-area .block-search {
+    z-index: 200;
+  }
+  .logo {
+    max-width: unset !important;
+    z-index: auto;
+  }
+  .header-main .header-row {
+    flex-wrap: wrap;
+  }
+  .header-main > .header-row > div.header-left {
+    width: 100%;
+  }
+  .header-main > .header-row > div:not(.header-left) {
+    flex: 1;
+  }
+  .header-left {
+    width: 100% !important;
+    justify-content: space-between !important;
+    margin-right: unset !important;
+  }
+  .header-right {
+    justify-content: center !important;
+    margin-left: unset !important;
+  }
+  .page-header.sticky-header .header-row .header-center,
+  .page-header.sticky-header .header-row .header-left,
+  .page-header.sticky-header .header-row .header-right {
+    padding-top: 8px !important;
+    padding-bottom: 7px !important;
+  }
+  .page-header.sticky-header .header-row .header-center {
+    display: none;
+  }
+}
+.search-toggle-icon {
+  display: none !important;
+}
+.search-area .block-search {
+  display: block !important;
+  position: relative !important;
+  top: unset !important;
+  border: initial !important;
+  right: unset !important;
+}
+/* END CUSTOMIZATIONS - HEADER */
 /*# sourceMappingURL=styles2022.css.map */
