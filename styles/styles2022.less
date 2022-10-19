@@ -1552,21 +1552,13 @@
     flex-wrap: wrap;
     gap: var(--gap-sm);
 
-
-    video {
-      display: block;
-      width: 100%;
-      max-width: 400px;
-      object-fit: contain;
-    }
-
     &:not(.active) {
       display: none;
     }
   }
 
   &__img {
-    display: none;
+    display: block;
     width: 100%;
     max-width: 400px;
     object-fit: contain;
@@ -1596,18 +1588,6 @@
     width: -moz-fit-content;
     width: fit-content;
     padding: 15px 30px;
-  }
-
-  @media (max-width: 768px) {
-    &__img {
-      display: block;
-    }
-
-    &__content {
-      video {
-        display: none;
-      }
-    }
   }
 }
 
